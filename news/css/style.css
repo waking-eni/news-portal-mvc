@@ -1,0 +1,65 @@
+html, body
+{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.navbar
+{
+    min-height: 10px !important;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.navbar-nav li a
+{
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+}
+.wrapper-container
+{
+    height: 70%;
+}
+.sidebar
+{
+    height: 100%;
+}
+a[data-toggle="collapse"]
+{
+    position: relative;
+}
+.dropdown-toggle::after
+{
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.mainn
+{
+    width: 100%;    
+    text-align: center;
+}
+.center-div
+{
+    margin: 0 auto;
+    width: 50%;
+}
+.yellow-font
+{
+    color: #34eb7d;
+}
+a:hover
+{
+    color: #4d8764;
+    text-decoration: none;
+}
+.nav-link:hover
+{
+    color: #4d8764;
+    text-decoration: none;
+}
+/*hide scrollbar*/
+::-webkit-scrollbar {
+    display: none;
+}
