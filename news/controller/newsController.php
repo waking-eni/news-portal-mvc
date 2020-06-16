@@ -40,7 +40,7 @@ class NewsController {
         $controller = $this->getController();
         $sql = "UPDATE news SET author = ?, title = ? category = ?, content = ?, short_description = ?, 
                 picture = ?, picture_source = ?  WHERE id = ?;";
-        $type = 'sssssss';
+        $type = 'ssssssss';
         $controller->arrayParamRecord($sql, $values, $type);
     }
 
