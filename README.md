@@ -2,7 +2,7 @@
 News portal\
 OOP PHP, HTML, CSS, JavaScript, Bootstrap, MySQL, WampServer\
 Back-end: OOP PHP and MySQL for the database\
-Front-end: CSS, Bootstrap and JavaScript\
+Front-end: HTML, CSS, Bootstrap and JavaScript\
 Design pattern: MVC
 Server: Apache (using WampServer)
 ***
