@@ -1,8 +1,8 @@
 # news-portal-mvc
 News portal\
-OOP PHP, HTML, CSS, JavaScript, Bootstrap, MySQL, WampServer\
+OOP PHP, HTML, CSS, JavaScript, jQuery, AJAX, Bootstrap, MySQL, WampServer\
 Back-end: OOP PHP and MySQL for the database\
-Front-end: HTML, CSS, Bootstrap and JavaScript\
+Front-end: HTML, CSS, Bootstrap, jQuery, JavaScript, AJAX\
 Design pattern: MVC\
 Server: Apache (using WampServer)
 ***
@@ -26,3 +26,4 @@ Server: Apache (using WampServer)
 * Administrators can delete any comment
 * Administrators can delete articles
 * Administrators can add a new article
+* Comment functionality with AJAX
