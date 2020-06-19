@@ -16,8 +16,10 @@
 
 <div id="comment-div"></div>
 
+<button id="showmore" class="btn btn-dark">Show more comments</button>
+
 <!--show existing comments from the database-->
-<div class="comment-div">
+<div class="comment-div" id="comments-div">
     <?php
 
     $comm = new CommentsController();
@@ -34,7 +36,7 @@
                     //button for deleting comments
                     if(isset($_SESSION['administratorUsername']) || 
                             (isset($_SESSION['userUsername']) && ($_SESSION['userUsername'] == $comment['username']))) {
-                                echo '<form action="../includes/comments.inc.php" method="post">';
+                                echo '<form action="../inc.scripts/comments.inc.php" method="post">';
                                 echo '<button type="submit" name="deletecom" class="btn btn-dark">Delete</button>';
                                 echo '<input type="hidden" name="comId" value="'.$comment['id'].'">';
                                 echo '</form>';
@@ -51,4 +53,15 @@
     function emptyComment() {
         document.getElementById("commentArea").innerText = "";
     }
+
+    //ajax
+    $(document).ready(function() {
+        var commentCount = 2;
+        $("#showmore").click(function() {
+            commentCount += 2;
+            $("#comments-div").load("../inc.scripts/loadcomments.inc.php", {
+                commentNewCount: commentCount
+            })
+        });
+    });
 </script>

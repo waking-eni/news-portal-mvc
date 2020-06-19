@@ -12,7 +12,7 @@ class CommentsController {
     /* select comments */
     public function selectComment($id) {
         $controller = $this->getController();
-        $sql = "SELECT id, username, content FROM comments WHERE news_id = ? ;";
+        $sql = "SELECT id, username, content FROM comments WHERE news_id = ? LIMIT 2;";
         $result = $controller->oneParamRecord($sql, $id);
         return $result;
     }
