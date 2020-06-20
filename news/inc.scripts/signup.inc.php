@@ -13,7 +13,7 @@ if(isset($_POST['signup-submit'])) {
 	$userTable->email = str_replace(array(':', '-', '/', '*', '<', '>'), '', $_POST['mail']);
     
 	$password = str_replace(array(':', '-', '/', '*', '<', '>'), '', $_POST['pwd']);
-    $passwordRepeat = str_replace(array(':', '-', '/', '*', '<', '>'), '', $_POST['pwdrepeat']);
+    	$passwordRepeat = str_replace(array(':', '-', '/', '*', '<', '>'), '', $_POST['pwdrepeat']);
 	
 	/*error handlers */
 
