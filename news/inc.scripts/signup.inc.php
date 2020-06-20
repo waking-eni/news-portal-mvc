@@ -49,11 +49,9 @@ if(isset($_POST['signup-submit'])) {
 		} else {
 			//insert
 			$userTable->password = password_hash($password, PASSWORD_DEFAULT);
-            //send values by reference because call_user_func_array expects it
-            //$values = array(&$fullname, &$username, &$hashedPwd, &$email, &$phone, &$registerDate);
-            $userController->insertUser($userTable);
-            header("Location: ../view/loginUser.php?signup=success");
-            exit();
+            		$userController->insertUser($userTable);
+            		header("Location: ../view/loginUser.php?signup=success");
+            		exit();
 		}
 	}
 		
