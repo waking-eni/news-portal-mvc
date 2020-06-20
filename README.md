@@ -1,6 +1,6 @@
 # news-portal-mvc
 News portal\
-OOP PHP, HTML, CSS, JavaScript, jQuery, AJAX, Bootstrap, MySQL, WampServer\
+# OOP PHP, HTML, CSS, JavaScript, jQuery, AJAX, Bootstrap, MySQL, WampServer\
 Back-end: OOP PHP and MySQL for the database\
 Front-end: HTML, CSS, Bootstrap, jQuery, JavaScript, AJAX\
 Design pattern: MVC\
