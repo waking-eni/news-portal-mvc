@@ -21,7 +21,8 @@ class NewsController {
     /* select user */
     public function selectNews($id) {
         $controller = $this->getController();
-        $sql = "SELECT id, username, email FROM user WHERE id = ?;";
+        $sql = "SELECT title, category, administrator_id, date_added, short_description, 
+        content, picture, picture_source FROM news WHERE id = ? ;";
         $result = $controller->oneParamRecord($sql, $id);
         return $result;
     }
