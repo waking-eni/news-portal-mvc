@@ -1,17 +1,19 @@
 <?php
 
 require_once __DIR__.'/modelController.php';
+require_once __DIR__.'/../config/database.php';
 
 class CommentsController {
 
-    public function getController() {
-        $controller = new ModelController();
-        return $controller;
+    public function connect()
+    {
+        $db = Database::getInstance();
+        return $db;
     }
 
     /* select comments */
     public function selectComment($id) {
-        $controller = $this->getController();
+        $controller = $this->connect();
         $sql = "SELECT id, username, content FROM comments WHERE news_id = ? LIMIT 2;";
         $result = $controller->oneParamRecord($sql, $id);
         return $result;
@@ -19,7 +21,7 @@ class CommentsController {
 
     /* insert comment */
     public function insertComment($values) {
-        $controller = $this->getController();
+        $controller = $this->connect();
         $sql = "INSERT INTO comments (username, content, news_id) 
                 VALUES (?, ?, ?);";
         $type = 'sss';
@@ -28,7 +30,7 @@ class CommentsController {
 
     /* update comment */
     public function updateComment($values) {
-        $controller = $this->getController();
+        $controller = $this->connect();
         $sql = "UPDATE comments SET content = ? WHERE id = ?;";
         $type = 's';
         $controller->arrayParamRecord($sql, $values, $type);
@@ -36,7 +38,7 @@ class CommentsController {
 
     /* delete comment */
     public function deleteComment($id) {
-        $controller = $this->getController();
+        $controller = $this->connect();
         $sql = "DELETE FROM comments WHERE id = ?;";
         $controller->oneParamRecord($sql, $id);
     }
